@@ -1,0 +1,132 @@
+/**
+* Template Name: Reto POO - v1.0.0
+* Author: Plazas, Ricardo Gastón
+*/
+
+/*--------------------------------------------------------------
+# 
+# 
+--------------------------------------------------------------*/
+
+/* Fonts */
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #FFFFFF;
+  --color-primary: #212121;
+  --color-secondary: #757575;
+}
+
+.dark-primary-color {
+  background: #303F9F;
+}
+
+.default-primary-color {
+  background: #3F51B5;
+}
+
+.light-primary-color {
+  background: #C5CAE9;
+}
+
+.accent-color {
+  background: #448AFF;
+}
+
+.divider-color {
+  border-color: #BDBDBD;
+}
+
+.text-primary-color {
+  color: #FFFFFF;
+}
+
+.primary-text-color {
+  color: #212121;
+}
+
+.secondary-text-color {
+  color: #757575;
+}
+
+/* Smooth scroll behavior */
+/* Comportamiento de desplazamiento suave */
+
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: var(--font-default);
+  color: var(--color-secondary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}
+
+/*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.sections-bg {
+  background-color: var(--font-primary);
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-header h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-header p {
+  margin-bottom: 0;
+  color: var(--color-secondary);
+}
