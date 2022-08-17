@@ -5,7 +5,8 @@ def fibonacci(numero):
         return 1
     else:
         return (fibonacci(numero+1))+(fibonacci(numero-2))
-for numero in range(51):
-    print(fibonacci(numero))
-    
+contador=0
+while contador>50:
+    print(fibonacci(contador))
+    contador+=1
     
