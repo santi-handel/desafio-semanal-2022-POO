@@ -5,10 +5,11 @@ export default function Home() {
             <div className="container">
                 <div className="wraper">
                     <div className="home">
-                        
+                        <br />
+                        HOME
                     </div>
                 </div>
             </div>
         </>
-    )
+    );
 }
