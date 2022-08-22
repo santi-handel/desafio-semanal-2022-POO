@@ -1,10 +1,10 @@
 import "../assets/css/Loading.css";
 import iconoCargador from "../assets/statics/loading.gif";
 export default function Loading() {
-    const load = Loading.getElementById("load");
+    const load = document.getElementById("load");
     console.log(load);
     setTimeout(function(){
-        load.style.display = "none";
+        //load.style.display = "none";
     }, 2000);
     return (
         <>

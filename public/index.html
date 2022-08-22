@@ -25,24 +25,11 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>Retos de Programación</title>
-  <style>
-    .loading {
-      width: 100%;
-      height: 100vh;
-      background-color: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      *position: absolute;
-    }
-  </style>
 </head>
 
 <body>
-  <div className="loading" id="load"><img src="https://github.com/rgplazas/desafio-semanal-2022-POO/blob/master/src/assets/statics/loading.gif" className="img-fluid mx-auto d-block" alt="loading"></div>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  
   <!-- <button id="botonTraemeData">holis</button> -->
   <!--
       This HTML file is a template.
@@ -57,11 +44,3 @@
 </body>
 
 </html>
-
-<script>
-  const load = Loading.getElementById("load");
-    console.log(load);
-    setTimeout(function(){
-        load.style.display = "none";
-    }, 2000);
-</script>

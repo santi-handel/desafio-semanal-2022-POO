@@ -1,5 +1,6 @@
-import Loading from "./Loading";
+//import Loading from "./Loading";
 import Header from "./Header";
+import Present from "./Present";
 import Footer from "./Footer";
 export default function Layout(props) {
     const { children } = props;
@@ -7,6 +8,7 @@ export default function Layout(props) {
         <>
             {/* <Loading> */}
                 <Header></Header>
+                <Present></Present>
                 {children}
                 <Footer></Footer>
             {/* </Loading> */}

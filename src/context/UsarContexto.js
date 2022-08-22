@@ -2,7 +2,7 @@ import Contexto from "./Contexto";
 import { useState } from "react";
 // importacion de firebase
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onChildAdded, onValue, query, orderByChild} from "firebase/database";
+import { getDatabase, ref, onValue, query, orderByChild} from "firebase/database";
 
 export default function UsarContexto(props) {
 
@@ -31,9 +31,10 @@ const queryRetos = query(refRetos, orderByChild("order/", "asc"));
 const [estado, setEstado] = useState([]);
 
 const { children } = props;
-const estadoInicial = {
+
+/*const estadoInicial = {
     retos: []
-}
+}*/
 
 const listameRetos = async () => {
     onValue(queryRetos, (snap) => {
