@@ -8,7 +8,7 @@ export default function Footer() {
             {/* <div>
                 <p>Copyright RGPlazas 2022</p>
             </div> */}
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">Copyright RGPlazas 2022</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -16,7 +16,7 @@ export default function Footer() {
                         <Nav className="me-auto">
                         </Nav>
                         <Nav>
-                            <Navbar.Brand href="https://github.com/rgplazas/desafio-semanal-2022-POO"><img alt="" src={iconoCabecera} width="30" height="30" className="d-inline-block align-top"/>{' '}</Navbar.Brand>
+                            <Navbar.Brand href="https://github.com/rgplazas/desafio-semanal-2022-POO" target="_blank"><img alt="" src={iconoCabecera} width="30" height="30" className="d-inline-block align-top"/>{' '}</Navbar.Brand>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

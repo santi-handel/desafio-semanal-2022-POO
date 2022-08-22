@@ -665,3 +665,43 @@ input:-ms-input-placeholder {
   margin-bottom: 0;
   margin-left: var(--space-xs)
 }
+
+.DCButton_DCButton__outline__mECyy {
+  border: 1px solid var(--grey-5);
+  background-color: var(--grey-2);
+}
+
+.DCButton_DCButton__2G827 {
+  border: none;
+  color: var(--default-button-text-color);
+  background-color: var(--default-button-background-color);
+  border-radius: var(--rounded);
+  font-family: var(--heading-font-family);
+  cursor: pointer;
+  font-weight: 500;
+  -moz-transition: box-shadow var(--duration-200) ease-in-out,border-color var(--duration-200) ease-in-out,background-color var(--duration-200) ease-in-out;
+  transition: box-shadow var(--duration-200) ease-in-out,border-color var(--duration-200) ease-in-out,background-color var(--duration-200) ease-in-out;
+  border: 1px solid var(--grey-3);
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  align-items: center;
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-xs);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.notion-title {
+  width: 100%;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}

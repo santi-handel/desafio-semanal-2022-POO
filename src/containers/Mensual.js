@@ -10,22 +10,16 @@ export default function Semanal() {
     }, []);
     return (
         <>
-            <div className="container">
-                <div className="wraper">
-                    <div className="home">
-                        <br />
-                        <Container>
-                            <Row>
-                                {
-                                    retosMensual.map((item) => (
-                                        <RetoMensual {...item}></RetoMensual>
-                                    ))
-                                }
-                            </Row>
-                        </Container>
-                    </div>
-                </div>
-            </div>
+            <br />
+            <Container>
+                <Row>
+                    {
+                        retosMensual.map((item) => (
+                            <RetoMensual {...item}></RetoMensual>
+                        ))
+                    }
+                </Row>
+            </Container>
         </>
     );
 }
