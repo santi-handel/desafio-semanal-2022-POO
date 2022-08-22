@@ -3,7 +3,7 @@ import Home from "../containers/Home";
 import Semanal from "../containers/Semanal";
 import Mensual from "../containers/Mensual";
 import Layout from "../components/Layout";
-//import "../assets/css/App.css";
+import "../assets/css/App.css";
 import UsarContexto from "../context/UsarContexto";
 function App() {
   return (

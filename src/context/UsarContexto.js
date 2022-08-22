@@ -23,31 +23,44 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 //referencias firebase
-const refRetos = ref(db, "/");
+const refRetosSemanal = ref(db, "retosSemanal/");
+const refRetosMensual = ref(db, "retosMensual/");
 
 //query firebase
-const queryRetos = query(refRetos, orderByChild("order/", "asc"));
-//const queryLimitToFirstRetos = query(refRetos, limitToFirst(2)); //trae los primeros dos semanas de retos
-const [estado, setEstado] = useState([]);
+const queryRetosSemanal = query(refRetosSemanal, orderByChild("order/"));
+const queryRetosMensual = query(refRetosMensual, orderByChild("order/"));
+//const queryLimitToFirstRetos = query(refRetosSemanal, limitToFirst(2)); //trae los primeros dos semanas de retosSemanal
+//Estados de los useState
+const [estadoSemanal, setEstadoSemanal] = useState([]);
+const [estadoMensual, setEstadoMensual] = useState([]);
 
 const { children } = props;
 
 /*const estadoInicial = {
-    retos: []
+    retosSemanal: []
 }*/
 
-const listameRetos = async () => {
-    onValue(queryRetos, (snap) => {
+const listameRetosSemanal = async () => {
+    onValue(queryRetosSemanal, (snap) => {
         let data = snap.val();
-        setEstado(data);
+        setEstadoSemanal(data);
+    })
+}
+
+const listameRetosMensual = async () => {
+    onValue(queryRetosMensual, (snap) => {
+        let data = snap.val();
+        setEstadoMensual(data);
     })
 }
 
     return (
         <>
             <Contexto.Provider value={{
-                retos: estado,
-                listameRetos
+                retosSemanal: estadoSemanal,
+                retosMensual: estadoMensual,
+                listameRetosSemanal,
+                listameRetosMensual
             }}>
                 {children}
             </Contexto.Provider>

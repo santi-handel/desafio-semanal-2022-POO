@@ -1,11 +1,12 @@
 import { useContext, useEffect } from "react";
 import Contexto from "../context/Contexto";
-import "../assets/css/Home.css";
-import Reto from "../components/Reto";
-export default function Home() {
-    const { listameRetos, retos } = useContext(Contexto);
-    useEffect(() => { 
-        listameRetos();
+import RetoMensual from "../components/RetoMensual";
+import Container from 'react-bootstrap/Container';
+import Row from "react-bootstrap/Row";
+export default function Semanal() {
+    const { listameRetosMensual, retosMensual } = useContext(Contexto);
+    useEffect(() => {
+        listameRetosMensual();
     }, []);
     return (
         <>
@@ -13,11 +14,15 @@ export default function Home() {
                 <div className="wraper">
                     <div className="home">
                         <br />
-                        {
-                            retos.map((item)=>(
-                                <Reto {...item}></Reto>
-                            ))
-                        }
+                        <Container>
+                            <Row>
+                                {
+                                    retosMensual.map((item) => (
+                                        <RetoMensual {...item}></RetoMensual>
+                                    ))
+                                }
+                            </Row>
+                        </Container>
                     </div>
                 </div>
             </div>

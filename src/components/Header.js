@@ -16,7 +16,7 @@ export default function Header() {
                         <Nav>
                             <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="/semanales2022">Ejercicios Semanales '22</Nav.Link>
-                            <Nav.Link href="/">Apps Mensuales '22</Nav.Link>
+                            <Nav.Link href="/mensuales2022">Apps Mensuales '22</Nav.Link>
                             <Nav.Link href="https://github.com/rgplazas/desafio-semanal-2022-POO">Proyecto en GitHub</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

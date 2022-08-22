@@ -1,4 +1,4 @@
-import "../assets/css/Loading.css";
+//import "../assets/css/Loading.css";
 import iconoCargador from "../assets/statics/loading.gif";
 export default function Present() {
     return (
