@@ -8,6 +8,7 @@ export default function Semanal() {
     useEffect(() => {
         listameRetosMensual();
     }, []);
+    
     return (
         <>
             <br />
@@ -15,7 +16,7 @@ export default function Semanal() {
                 <Row>
                     {
                         retosMensual.map((item) => (
-                            <RetoMensual {...item}></RetoMensual>
+                            <RetoMensual {...item} key={item.order}></RetoMensual>
                         ))
                     }
                 </Row>
