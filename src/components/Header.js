@@ -1,25 +1,21 @@
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
 import Contexto from "../context/Contexto";
-import Container from 'react-bootstrap/Container';
+import { useNavigate } from "react-router-dom";
+import { Container } from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import iconoCabecera from "../assets/statics/loading.gif";
 export default function Header() {
-    const { loginWithGoogle } = useContext(Contexto);
-
+    const { user, logout, loading} = useContext(Contexto);
+    
     const navigate = useNavigate();
-
-    const handleLogin = async () => {
-        try {
-            await loginWithGoogle();
-            navigate("/");
-        } catch (error) {
-            console.log(error.message);
-        }
-
+    const handleLogout = async() => {
+        await logout()
+        navigate('/login')
     }
 
+    if(loading) return <h1>loading</h1>
+    
     return (
         <>
             <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
@@ -35,7 +31,8 @@ export default function Header() {
                             <Nav.Link href="/semanales2022">Ejercicios Semanales '22</Nav.Link>
                             <Nav.Link href="/mensuales2022">Apps Mensuales '22</Nav.Link>
                             <Nav.Link href="https://github.com/rgplazas/desafio-semanal-2022-POO">Proyecto en GitHub</Nav.Link>
-                            <button id="login" name="login" onClick={handleLogin} className="DCButton_DCButton__2G827 DCButton_DCButton__outline__mECyy undefined" aria-label="Login with github"><div className="DCButton_DCButton_icon__l9p8v DCButton_DCButton_icon__marginRight__9b00y"></div><div className="DCButton_DCButton_wrapper__1uexv">Login Github</div></button>
+                            <Nav.Link href="/login" style={{'color':'greed'}}>Login</Nav.Link>
+                            <Nav.Link style={{'color':'red'}} onClick={handleLogout}>Logout</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

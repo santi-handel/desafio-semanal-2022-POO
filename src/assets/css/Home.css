@@ -4,3 +4,8 @@ body {
     font-family: "Quicksand", sans-serif !important;
     color: #666;
 }
+
+.fondoButoon {
+    background: #fff !important;
+    color:red !important;
+  }
