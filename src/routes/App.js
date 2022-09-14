@@ -15,9 +15,9 @@ function App() {
         <UsarContexto>
           <Layout>
             <Routes>
-              <Route exact path="/" element={<Home />}></Route>
               <Route exact path="/login" element={<Login />}></Route> 
               <Route exact path="/registro" element={<Registro />}></Route>  
+              <Route exact path="/" element={<ProtetecRoute><Home /></ProtetecRoute>}></Route>
               <Route exact path="/semanales2022" element={<ProtetecRoute><Semanal /></ProtetecRoute>}></Route>
               <Route exact path="/mensuales2022" element={<ProtetecRoute><Mensual /></ProtetecRoute>}></Route>
             </Routes>
