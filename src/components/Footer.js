@@ -2,12 +2,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import iconoCabecera from "../assets/statics/github.png";
+import { useContext } from "react";
+import Contexto from "../context/Contexto";
 export default function Footer() {
-    return (
-        <>
-            {/* <div>
-                <p>Copyright RGPlazas 2022</p>
-            </div> */}
+    const { user } = useContext(Contexto);
+    let pie = "";
+    if (user) {
+        pie = <>
             <Navbar collapseOnSelect bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">Copyright RGPlazas 2022</Navbar.Brand>
@@ -16,11 +17,12 @@ export default function Footer() {
                         <Nav className="me-auto">
                         </Nav>
                         <Nav>
-                            <Navbar.Brand href="https://github.com/rgplazas/desafio-semanal-2022-POO" target="_blank"><img alt="" src={iconoCabecera} width="30" height="30" className="d-inline-block align-top"/>{' '}</Navbar.Brand>
+                            <Navbar.Brand href="https://github.com/rgplazas/desafio-semanal-2022-POO" target="_blank"><img alt="" src={iconoCabecera} width="30" height="30" className="d-inline-block align-top" />{' '}</Navbar.Brand>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>
-    )
+    }
+    return (pie);
 }
