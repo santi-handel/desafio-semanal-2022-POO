@@ -35,7 +35,7 @@ export default function Login() {
             await loginWithGoogle();
             navigate("/");
         } catch (error) {
-            console.log(error.message);
+            setError(error.message);
         }
 
     }

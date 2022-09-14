@@ -7,6 +7,7 @@ import Login from "../components/Login";
 import Registro from "../components/Registro";
 import "../assets/css/App.css";
 import UsarContexto from "../context/UsarContexto";
+import ProtetecRoute from "../components/ProtetecRoute";
 function App() {
   return (
     <>
@@ -17,8 +18,8 @@ function App() {
               <Route exact path="/" element={<Home />}></Route>
               <Route exact path="/login" element={<Login />}></Route> 
               <Route exact path="/registro" element={<Registro />}></Route>  
-              <Route exact path="/semanales2022" element={<Semanal />}></Route>
-              <Route exact path="/mensuales2022" element={<Mensual />}></Route>
+              <Route exact path="/semanales2022" element={<ProtetecRoute><Semanal /></ProtetecRoute>}></Route>
+              <Route exact path="/mensuales2022" element={<ProtetecRoute><Mensual /></ProtetecRoute>}></Route>
             </Routes>
           </Layout>
         </UsarContexto>
