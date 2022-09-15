@@ -1,12 +1,14 @@
+import { useContext } from "react";
+import Contexto from "../context/Contexto";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import iconoCabecera from "../assets/statics/github.png";
-import { useContext } from "react";
-import Contexto from "../context/Contexto";
+
 export default function Footer() {
     const { user } = useContext(Contexto);
     let pie = "";
+    
     if (user) {
         pie = <>
             <Navbar collapseOnSelect bg="dark" variant="dark">
@@ -24,5 +26,6 @@ export default function Footer() {
             </Navbar>
         </>
     }
+    
     return (pie);
 }

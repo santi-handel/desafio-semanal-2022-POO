@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import Contexto from "../context/Contexto";
+import {Container, Row } from 'react-bootstrap';
 import RetoSemanal from "../components/RetoSemanal";
-import Container from 'react-bootstrap/Container';
-import Row from "react-bootstrap/Row";
+
 export default function Semanal() {
     const { listameRetosSemanal, retosSemanal } = useContext(Contexto);
     useEffect(() => {

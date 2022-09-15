@@ -1,17 +1,18 @@
 import { useContext } from "react";
 import Contexto from "../context/Contexto";
-import { Container } from "react-bootstrap";
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import iconoCabecera from "../assets/statics/loading.gif";
 import Present from "./Present";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import iconoCabecera from "../assets/statics/loading.gif";
+
 export default function Header() {
     const { logout, user } = useContext(Contexto);
 
     const handleLogout = async () => {
         await logout()
     }
+
     let cabecera = "";
+
     if (user) {
         cabecera = <>
             <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">

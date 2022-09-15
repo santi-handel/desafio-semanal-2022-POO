@@ -1,8 +1,9 @@
 import { useState, useContext } from "react";
 import Contexto from "../context/Contexto";
-import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 import "../assets/css/Login.css";
+
 export default function Registro() {
     const [user, setUser] = useState({
         email: "",
@@ -31,13 +32,13 @@ export default function Registro() {
     return (
         <>
             <Container>
-                {error && <p>{error}</p>}
                 <Row className="vh-100 d-flex justify-content-center align-items-center">
                     <Col md={8} lg={6} xs={12}>
                         <div className="border border-3 border-primary"></div>
                         <Card className="shadow fondoBackground">
                             <Card.Body>
                                 <div className="mb-3 mt-md-4">
+                                    {error && <p style={{'color':'red'}}>{error}</p>}
                                     <h2 className="fw-bold mb-2 text-uppercase ">
                                         Registro para los Retos POO
                                     </h2>
