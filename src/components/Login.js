@@ -11,7 +11,7 @@ export default function Login() {
         password: "",
     });
 
-    const { login, loginWithGoogle } = useContext(Contexto);
+    const { login, loginWithGoogle, resetPassword} = useContext(Contexto);
 
     const handleChange = ({ target: { value, name } }) =>
         setUser({ ...user, [name]: value });
@@ -40,16 +40,26 @@ export default function Login() {
 
     }
 
+    const handleResetPassword = async (e) => {
+        e.preventDefault();
+        if (!user.email) return setError("Write an email to reset password");
+        try {
+            await resetPassword(user.email);
+            setError('We sent you an email. Check your inbox')
+        } catch (error) {
+            setError(error.message);
+        }
+    };
     return (
         <>
-            <Container> 
+            <Container>
                 <Row className="vh-100 d-flex justify-content-center align-items-center">
                     <Col md={8} lg={6} xs={12}>
                         <div className="border border-3 border-primary"></div>
                         <Card className="shadow fondoBackground">
                             <Card.Body>
                                 <div className="mb-3 mt-md-4">
-                                    {error && <p style={{'color':'red'}}>{error}</p>}
+                                    {error && <p style={{ 'color': 'red' }}>{error}</p>}
                                     <h2 className="fw-bold mb-2 text-uppercase ">Retos POO</h2>
                                     <p className=" mb-5">¡Por favor, introduzca su nombre de usuario y contraseña!</p>
                                     <div className="mb-3">
@@ -72,7 +82,7 @@ export default function Login() {
                                                 controlId="formBasicCheckbox"
                                             >
                                                 <p className="small">
-                                                    <a className="text-primary" href="#!">
+                                                    <a className="text-primary" href="#!" onClick={handleResetPassword}>
                                                         ¿Olvidó su contraseña?
                                                     </a>
                                                 </p>

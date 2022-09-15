@@ -23,6 +23,8 @@ export default function AuthContex(props) {
     //Se comprueba si el usuario esta logeado o no
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    
+    const resetPassword = async (email) => sendPasswordResetEmail(auth, email);
 
     useEffect(() => {
         const unsubuscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -39,7 +41,8 @@ export default function AuthContex(props) {
                 user,
                 loading,
                 loginWithGoogle,
-                logout
+                logout,
+                resetPassword
             }}>
                 {children}
             </ContextoAuth.Provider>
