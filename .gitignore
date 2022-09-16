@@ -26,3 +26,4 @@ firebase-error.log*
 .firebase
 .firebaserc
 firebase.json
+package-lock.json
