@@ -4,14 +4,14 @@ import { getDatabase } from "firebase/database";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDHmSEJvkUmCQb6SdO2OBzS1vb4bD68w2w",
-    authDomain: "desafio-semanal-2022-poo.firebaseapp.com",
-    databaseURL: "https://desafio-semanal-2022-poo-default-rtdb.firebaseio.com",
-    projectId: "desafio-semanal-2022-poo",
-    storageBucket: "desafio-semanal-2022-poo.appspot.com",
-    messagingSenderId: "367268496132",
-    appId: "1:367268496132:web:7dd147a16490f12d90c651",
-    measurementId: "G-VHV17QR13E"
+    apiKey: process.env.REACT_APP_APIKEY_FIREBASE,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN_FIREBASE,
+    databaseURL: process.env.REACT_APP_DATABASEURL_FIREBASE,
+    projectId: process.env.REACT_APP_PROJECTID_FIREBASE,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET_FIREBASE,
+    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID_FIREBASE,
+    appId: process.env.REACT_APP_APPID_FIREBASE,
+    measurementId: process.env.REACT_APP_MEASUREMENTID_FIREBASE
 };
 
 // Initialize Firebase
