@@ -12,8 +12,6 @@
 /build
 
 # misc
-.firebase/*
-.firebaserc
 .DS_Store
 .env.local
 .env.development.local
@@ -25,5 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
 firebase-error.log*
-
-firebase.json       
+.firebase
+.firebaserc
+firebase.json
